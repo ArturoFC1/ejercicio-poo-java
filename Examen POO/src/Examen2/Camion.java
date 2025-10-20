@@ -1,14 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Examen2;
 
-/**
- *
- * @author artur
- */
-public class Camion {
+public class Camion extends Vehiculo {
     
+    private int capacidad;
+    private String color;
+    private int velocidad;
+    
+    public Camion(String marca, String modelo, int velocidadMaxima, String color){
+        super(marca, modelo, velocidadMaxima);
+        this.capacidad = 2;
+        this.color = color;
+        this.velocidad = 0;
+    }
+    
+    @Override
+    public int acelerar(int aceleracion){
+        return velocidad + aceleracion;
+    }
+    
+    @Override
+    public int frenar(){
+        return velocidad = 0;
+    }
 }

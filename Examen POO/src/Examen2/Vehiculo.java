@@ -1,14 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Examen2;
 
-/**
- *
- * @author artur
- */
-public class Vehiculo {
+public abstract class Vehiculo {
     
+    protected String marca;
+    protected String modelo;
+    protected int velocidadMaxima;
+    
+    public Vehiculo(String marca, String modelo, int velocidadMaxima){
+        this.marca = marca;
+        this.modelo = modelo;
+        this.velocidadMaxima = velocidadMaxima;
+    }
+    
+    public abstract int acelerar(int aceleracion);
+    public abstract int frenar();
 }
