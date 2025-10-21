@@ -11,15 +11,29 @@ public class Camion extends Vehiculo {
         this.capacidad = 2;
         this.color = color;
         this.velocidad = 0;
+        this.id = idIncremental;
+        idIncremental++;
+    }
+    
+    public int getVelocidad() {
+        return velocidad;
     }
     
     @Override
     public int acelerar(int aceleracion){
-        return velocidad + aceleracion;
+        velocidad += aceleracion;
+        return velocidad;
     }
     
     @Override
     public int frenar(){
         return velocidad = 0;
     }
+    
+    @Override
+    public String toString(){
+        return "\nId: "+id+"\nMarca: "+marca+"\nModelo: "+modelo+"\nVelocidad Maxima: "+velocidadMaxima+"\n- Color: "+color+"\n"
+                + "- Capacidad: "+capacidad+"\n- Velocidad actual: "+velocidad+"\n";
+    }
+    
 }
